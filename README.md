@@ -13,4 +13,3 @@ I am a basic student at school who desires to build mods for Games like KSP Beam
   
 - End goal - Modding into games, In the future understanding enough to poteinally build a simple engine.
 
-# link test
