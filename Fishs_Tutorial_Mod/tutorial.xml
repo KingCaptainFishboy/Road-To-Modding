@@ -1,0 +1,42 @@
+<!-- Internal ID and display name the game uses in the menu-->
+<Scenario name="Kitten's First Flight">
+    <Context>
+        <!-- Defines the planet. Kearth is the home planet in KSA.-->
+        <Body>Kearth</Body>
+        <!-- This is a preset coordinate. Launch_Pad_Alpha is the default starting point.-->
+        <Location>Launch_Pad_Alpha</Location>
+        <!-- Sets the clock to 0 (morning/start of day).-->
+        <Time>0</Time>
+    </Context>
+
+    <!-- The name that appears on the map or tracking station.-->
+    <Vessel name="Tutorial_Rocket">
+        <Parts>
+            <!-- This is a massive time-saver. Instead of listing every fuel tank and engine, telling the game: "Go into the game's craft files and load the 'Basic_Jumper_Mk1' design."-->
+            <Template>Basic_Jumper_Mk1</Template> 
+        </Parts>
+    </Vessel>
+
+<!--This is the most important part for the mod. It works like a ladder: you cannot get to Step 2 until Step 1's condition is "True."
+
+<Step id="X">: The numerical order of the tutorial.
+
+<Message>: The text that will pop up in the kitten's dialogue box.
+
+<Condition>: This is the "Gatekeeper."
+
+AnyKeyPress: The message stays on screen until the player hits a key.
+
+EngineIgnition: The game "listens" for the engine state. The message won't disappear until the player actually fires the rocket.-->
+
+    <Instructions>
+        <Step id="1">
+            <Message>Welcome to the Kitten Space Agency! I am your flight director.</Message>
+            <Condition type="AnyKeyPress" />
+        </Step>
+        <Step id="2">
+            <Message>Press [SPACE] to ignite the engines and begin your journey!</Message>
+            <Condition type="EngineIgnition" />
+        </Step>
+    </Instructions>
+</Scenario>

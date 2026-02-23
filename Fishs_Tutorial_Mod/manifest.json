@@ -1,0 +1,12 @@
+{
+    "id": "KingCaptainFishboyYT",
+    "name": "Kitten's First Flight",
+    "version": "1.0.0",
+    "loadOrder": 10,
+    "content": [
+        {
+            "type": "Scenario",
+            "path": "tutorial.xml"
+        }
+    ]
+}
